@@ -1,0 +1,151 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: calc(var(--nav-h) + 3rem) var(--section-px) 5rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.inner { max-width: 680px; }
+
+/* ── Terminal block ── */
+.terminalWrap {
+  margin-bottom: 2.25rem;
+}
+
+.fileTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  padding: 6px 14px;
+}
+
+.fileDot {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.fileName {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+}
+
+.terminal {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: 0 6px 6px 6px;
+  padding: 1.25rem 1.5rem;
+}
+
+.codeLine {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.codeIndent { padding-left: 1.5rem; }
+
+.cKey     { color: var(--accent); }
+.cStr     { color: #fbbf24; }
+.cVal     { color: #a78bfa; }
+.cArr     { color: #7dd3fc; }
+.cCmt     { color: var(--ink-faint); }
+.cDefault { color: var(--ink); }
+
+/* ── Eyebrow ── */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ── Typewriter ── */
+.typewriterBlock {
+  margin-bottom: 1.5rem;
+}
+
+.twPrefix {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-faint);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7.5vw, 5.5rem);
+  line-height: 1.03;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.twText {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.cursor {
+  color: var(--accent);
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Tagline ── */
+.tagline {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: var(--ink-muted);
+  font-weight: 300;
+  max-width: 480px;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+/* ── CTAs ── */
+.ctas {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+
+
+@media (max-width: 640px) {
+  .terminal { padding: 1rem 1.1rem; }
+  .codeLine { font-size: 12px; }
+}

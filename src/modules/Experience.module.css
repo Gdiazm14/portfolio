@@ -1,0 +1,108 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-faint);
+  padding-top: 3px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.degree {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.institution {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+}
+
+.detail {
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* Enfoque */
+.values { padding-top: 1rem; }
+
+.valuesLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 1rem;
+}
+
+.valueCard {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: border-color 0.2s;
+}
+.valueCard:hover { border-color: var(--accent); }
+
+.valueDot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.valueLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.valueDesc {
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}
