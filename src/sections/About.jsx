@@ -1,5 +1,6 @@
 import { personal, skills } from '../data'
 import styles from '../modules/About.module.css'
+import { FaMapMarkerAlt, FaGraduationCap, FaCheckCircle } from 'react-icons/fa'
 
 export default function About() {
   return (
@@ -16,9 +17,9 @@ export default function About() {
             <p key={i} className={styles.para}>{para}</p>
           ))}
           <div className={styles.pills}>
-            <span className={styles.pill}>📍 {personal.location}</span>
-            <span className={styles.pill}>🎓 {personal.year}</span>
-            <span className={styles.pill}>✅ Open to Internships</span>
+            <span className={styles.pill}><FaMapMarkerAlt className={styles.icon}/> {personal.location}</span>
+            <span className={styles.pill}> <FaGraduationCap className={styles.icon}/> {personal.year}</span>
+            <span className={styles.pill}> Open to Internships</span>
           </div>
         </div>
 

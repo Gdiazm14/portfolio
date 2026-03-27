@@ -58,6 +58,11 @@
   flex-wrap: wrap;
   gap: 0.4rem;
 }
+.icon {
+  margin-right: 8px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
 
 @media (max-width: 680px) {
   .grid {
