@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { personal, resume } from '../data.js';
+import { resume } from '../data.js';
 
 const links = [
   { label: 'About',      href: '#about' },
