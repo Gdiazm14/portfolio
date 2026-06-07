@@ -1,3 +1,21 @@
+// ------- ASSET IMPORTS --------
+import CV from './assets/CV.pdf';
+import scrumImg from './assets/scrum.png';
+import books1 from './assets/books-1.png';
+import books2 from './assets/books-2.png';
+import books3 from './assets/books-3.png';
+import books4 from './assets/books-4.png';
+import books5 from './assets/books-5.png';
+import sga1 from './assets/sga1.png';
+import sga2 from './assets/sga2.png';
+import sga3 from './assets/sga3.png';
+import sga4 from './assets/sga4.png';
+import sga5 from './assets/sga5.png';
+import sga6 from './assets/sga6.png';
+import f1 from './assets/f1.png';
+import f2 from './assets/f2.png';
+import f3 from './assets/f3.png';
+
 // ------- PERSONAL INFORMATION --------
 
 export const personal = {
@@ -24,7 +42,7 @@ export const personal = {
 
 export const resume = {
   label: "Download CV",
-  file: "../src/assets/CV.pdf"
+  file: CV
 };
 
 // ------- OPPORTUNITIES --------
@@ -123,8 +141,7 @@ export const certifications = [
 
     credentialUrl: "https://www.scrumstudy.com/certification/verify?type=SFC&number=1166877",
 
-    // Add path to your cert image, e.g. "/certs/scrum.png"
-    image: "../src/assets/scrum.png"
+    image: scrumImg
   }
 ];
 
@@ -186,48 +203,47 @@ export const approachItems = [
 ];
 
 // ------- PROJECTS --------
-// Fill in your real project info. Add image paths to `images` (e.g. ["/projects/p1.png"]).
-// // Leave `demo: ""` if there is no live demo.
+
 export const projects = [
   {
-  title: "Library Management System",
+    title: "Library Management System",
 
-  description: "Full-featured library management platform with loan management, book reservations, a complete book catalog, and role-based access control (Reader / Admin). Collaborated as a Full-Stack Developer using C# ASP.NET Core for the backend and Blazor for the frontend, with SQL Server and MySQL for data persistence. Key highlights include automated state management for loans and reservations, a bulk book import feature, an email notification system, monthly statistical reports exportable in both Excel and PDF format, and containerized deployment using Docker and Docker Compose.",
+    description: "Full-featured library management platform with loan management, book reservations, a complete book catalog, and role-based access control (Reader / Admin). Collaborated as a Full-Stack Developer using C# ASP.NET Core for the backend and Blazor for the frontend, with SQL Server and MySQL for data persistence. Key highlights include automated state management for loans and reservations, a bulk book import feature, an email notification system, monthly statistical reports exportable in both Excel and PDF format, and containerized deployment using Docker and Docker Compose.",
 
-  tags: ["C#", "ASP.NET Core", "Blazor", "SQL Server", "MySQL", "Docker", "JWT", "REST APIs"],
+    tags: ["C#", "ASP.NET Core", "Blazor", "SQL Server", "MySQL", "Docker", "JWT", "REST APIs"],
 
-  github: "https://github.com/Gdiazm14",
+    github: "https://github.com/Gdiazm14",
 
-  demo: "https://sgb-front.vercel.app",
+    demo: "https://sgb-front.vercel.app",
 
-  images: ["../src/assets/books-1.png", "../src/assets/books-2.png", "../src/assets/books-3.png", "../src/assets/books-4.png", "../src/assets/books-5.png"]
-},
+    images: [books1, books2, books3, books4, books5]
+  },
 
-{
-  title: "SGA – Asset Management System",
+  {
+    title: "SGA – Asset Management System",
 
-  description: "Institutional asset management platform built for the Universidad de Costa Rica's Centro de Informática. Handles the full lifecycle of physical assets: registration, loan tracking, reconciliation, and reporting. Collaborated as a Full-Stack Developer, responsible for major refactoring across both frontend and backend layers, and implementation of core features from the ground up. Key technical highlights include JWT-based authentication with role-based access control (Administrador / Asistente), a loan module with automatic MOROSO status detection after 30 days, PDF loan receipt generation using jsPDF v3 primitives (no third-party table plugins), a file-upload reconciliation flow using FormData with multipart handling, soft-delete logic via Estado field, and a full audit trail through a BitacoraService. Containerized with Docker Compose and served through an Nginx reverse proxy for institutional on-premise deployment.",
+    description: "Institutional asset management platform built for the Universidad de Costa Rica's Centro de Informática. Handles the full lifecycle of physical assets: registration, loan tracking, reconciliation, and reporting. Collaborated as a Full-Stack Developer, responsible for major refactoring across both frontend and backend layers, and implementation of core features from the ground up. Key technical highlights include JWT-based authentication with role-based access control (Administrador / Asistente), a loan module with automatic MOROSO status detection after 30 days, PDF loan receipt generation using jsPDF v3 primitives (no third-party table plugins), a file-upload reconciliation flow using FormData with multipart handling, soft-delete logic via Estado field, and a full audit trail through a BitacoraService. Containerized with Docker Compose and served through an Nginx reverse proxy for institutional on-premise deployment.",
 
-  tags: ["React 19", "ASP.NET Core", "SQL Server", "Docker", "JWT", "jsPDF", "Nginx", "CSS Modules", "Clean Architecture", "MVC", "SOLID Principles"],
+    tags: ["React 19", "ASP.NET Core", "SQL Server", "Docker", "JWT", "jsPDF", "Nginx", "CSS Modules", "Clean Architecture", "MVC", "SOLID Principles"],
 
-  github: "https://github.com/Gdiazm14",
+    github: "https://github.com/Gdiazm14",
 
-  demo: "",
+    demo: "",
 
-  images: ["../src/assets/sga1.png", "../src/assets/sga2.png", "../src/assets/sga3.png","../src/assets/sga6.png", "../src/assets/sga4.png", "../src/assets/sga5.png"]
-},
+    images: [sga1, sga2, sga3, sga6, sga4, sga5]
+  },
 
-{
-  title: "Personal Finance App",
+  {
+    title: "Personal Finance App",
 
-  description: "Personal finance web application for budgeting and expense tracking across customizable categories. Built with a decoupled architecture using Java Spring Boot as the REST API backend and React for the interactive frontend. Implements user authentication, relational database persistence, and is fully deployed on cloud platforms using Vercel for the frontend and Render for the backend.",
+    description: "Personal finance web application for budgeting and expense tracking across customizable categories. Built with a decoupled architecture using Java Spring Boot as the REST API backend and React for the interactive frontend. Implements user authentication, relational database persistence, and is fully deployed on cloud platforms using Vercel for the frontend and Render for the backend.",
 
-  tags: ["Java", "Spring Boot", "React", "REST APIs", "MySQL", "Vercel", "Render", "JWT Authentication"],
+    tags: ["Java", "Spring Boot", "React", "REST APIs", "MySQL", "Vercel", "Render", "JWT Authentication"],
 
-  github: "https://github.com/Gdiazm14/finance-front.git",
+    github: "https://github.com/Gdiazm14/finance-front.git",
 
-  demo: "https://finance-front-self.vercel.app/",
+    demo: "https://finance-front-self.vercel.app/",
 
-  images: ["../src/assets/f1.png", "../src/assets/f2.png", "../src/assets/f3.png"]
-}
+    images: [f1, f2, f3]
+  }
 ];
