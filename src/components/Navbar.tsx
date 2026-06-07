@@ -42,7 +42,7 @@ export function Navbar() {
         {/* Desktop CV button */}
         <a
           href={resume.file}
-          download
+          download="Greivin_Diaz_CV.pdf"
           className="hidden md:inline-flex items-center gap-2 font-label-md text-label-md bg-white text-background px-5 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-colors duration-300"
         >
           <span className="material-symbols-outlined text-base">download</span>
@@ -74,7 +74,7 @@ export function Navbar() {
           ))}
           <a
             href={resume.file}
-            download
+            download="Greivin_Diaz_CV.pdf"
             className="mt-2 flex items-center justify-center gap-2 font-label-md text-label-md bg-white text-background px-5 py-2 rounded-full"
           >
             <span className="material-symbols-outlined text-base">download</span>
